@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>النقوش</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+            color: #ff69b4; /* Hot pink color */
+            position: relative;
+            z-index: 1;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #ff69b4, #ff6347, #ff1493);
+            background-size: 600% 600%;
+            animation: gradientAnimation 10s ease infinite;
+            z-index: 0;
+        }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 0%; }
+            50% { background-position: 100% 100%; }
+            100% { background-position: 0% 0%; }
+        }
+
+        .decorations {
+            font-size: 1.5em;
+            color: #000; /* Black color */
+            font-style: italic;
+            margin-top: 10px;
+        }
+
+        .body-container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .section {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+
+        .input-section {
+            text-align: center;
+        }
+
+        .input-section input {
+            padding: 10px;
+            font-size: 1em;
+            border: 2px solid #ff1493;
+            border-radius: 5px;
+            width: 50%;
+            margin-bottom: 10px;
+        }
+
+        .input-section button {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #ff1493;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .input-section button:hover {
+            background-color: #ff69b4;
+            transform: scale(1.1);
+        }
+
+        .result {
+            text-align: center;
+            font-size: 1.2em;
+            color: #ff6347; /* Tomato */
+            margin-top: 20px;
+        }
+
+        .video-container {
+            display: none;
+            text-align: center;
+        }
+
+        .video-container video {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .subscribe-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            background-color: #ff1493;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .subscribe-button:hover {
+            background-color: #ff69b4;
+            transform: scale(1.1);
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            font-size: 1.5em;
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>النقوش</h1>
+        <p class="decorations">معاكم انقش ولحد في البشرية</p>
+    </header>
+
+    <div class="body-container">
+        <section class="section input-section">
+            <h2>ادخل التاريخ الاقرب الى قلبك</h2>
+            <input type="text" id="dateInput" placeholder="ادخل التاريخ">
+            <button onclick="checkDate()">تحقق</button>
+            <div id="result" class="result"></div>
+            <div id="videoContainer" class="video-container">
+                <video id="video" controls autoplay>
+                    <source src="WTC 9_11 _ First Plane Hit in North Tower _ Jules Naudet Video (Remastered 60fps AI Upscaled)(720P_60FPS).mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+        <a href="https://www.instagram.com/spiderlolman44/" class="subscribe-button" target="_blank">ابوني هذا يا الكفات</a>
+    </div>
+
+    <div class="footer">
+        معاكم انقش واحد في البشرية و تحيا الامبراطورية النازية  " تحياتي للادمن"
+    </div>
+
+    <script>
+        function checkDate() {
+            const dateInput = document.getElementById('dateInput').value;
+            const result = document.getElementById('result');
+            const videoContainer = document.getElementById('videoContainer');
+            const video = document.getElementById('video');
+            
+            if (dateInput === '9/11/2001') {
+                result.textContent = 'صحيح يا وجه الترمة';
+                videoContainer.style.display = 'block';
+                video.play();
+            } else {
+                result.textContent = 'يا وجه القلوة هذا هو الصحيح يا كحل الزك 9/11/2001';
+                videoContainer.style.display = 'none';
+            }
+        }
+    </script>
+
+</body>
+</html>
+
